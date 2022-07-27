@@ -13,7 +13,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/tourist_travel_icon"/>
+        android:src="@drawable/beach_icon"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"

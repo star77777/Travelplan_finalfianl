@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_calendar_list_fragment.xml" value="0.16979166666666667" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_custom_alert_dialog.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_login.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_main.xml" value="0.20111214087117701" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_movement_fragment.xml" value="0.16979166666666667" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_settings_fragment.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_sign_up.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_splash.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16979166666666667" />
       </map>
     </option>
   </component>

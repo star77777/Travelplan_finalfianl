@@ -17,7 +17,7 @@ abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mContext = this
-        retrofit = ServerApi.getRetrofit()
+        retrofit = ServerApi.getRetrofit(mContext)
         apiList =retrofit.create(APIList::class.java)
     }
 

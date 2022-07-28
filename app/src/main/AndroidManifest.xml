@@ -3,7 +3,7 @@
     package="com.example.travelplan_finalfianl">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Travelplan_finalfianl">
-
+        <activity
+            android:name=".addlist.EditCalendarListActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.signup.SignUpActivity"
             android:exported="false" />

@@ -19,21 +19,27 @@ import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EditCalendarListActivity : BaseActivity() {
+public class EditCalendarListActivity : BaseActivity() {
     lateinit var binding: ActivityEditCalendarListBinding
+
+    // private lateinit var rv: RecyclerView
 
     //    선택한 약속 일시를 저장할 멤버변수
     val mSelectedDateTime = Calendar.getInstance()!!  // 기본값 : 현재시간
     val mSelectedDateTime2= Calendar.getInstance()!!
     //  var mSelectedLatLng : LatLng? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_edit_calendar_list)
 
+
         setupEvents()
         setValues()
+
     }
+
 
     @SuppressLint("ClickableViewAccessibility")
     override fun setupEvents() {
@@ -95,7 +101,7 @@ class EditCalendarListActivity : BaseActivity() {
 
             //            1. 약속의 제목 정했는가
 //            1. 약속의 제목 정했는가
-            val inputTitle = "d"
+            val inputTitle = binding.titleEdt.text.toString()
 
 
 //            2. 날짜/시간이 선택이 되었는가?
@@ -121,8 +127,9 @@ class EditCalendarListActivity : BaseActivity() {
             val sda = SimpleDateFormat("yyyy. MM. dd")
             val latitude = 0.0
             val longitude = 0.0
-            val inputPlaceName = ""
 
+
+            val inputPlaceName = binding.placeNameEdt.text.toString()
 
             apiList.postRequestdataList(
                 inputTitle,
@@ -157,9 +164,20 @@ class EditCalendarListActivity : BaseActivity() {
 
         }
 
+
     }
 
     override fun setValues() {
 //           titleTxt.text = "새 약속 만들기"
     }
+
+//    abstract val mList: List<CalendarListData>
+//    val adapter = CalendarListRecylerViewAdapter(mList) //adapter 생성
+//
+//    adapter!!.itemClick =object:CalendarListRecylerViewAdapter.ItemClick{
+//        override fun onClick(view: View, position: Int) {
+//            val intent = Intent(context,TodoListActivity::class.java)
+//            startActivity(intent)
+//        }
+    // }
 }

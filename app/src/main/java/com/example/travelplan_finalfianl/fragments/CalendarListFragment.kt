@@ -31,6 +31,7 @@ class CalendarListFragment : BaseFragment() {
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.activity_calendar_list_fragment,
+            // R.layout.list_item_travel_list,
             container,
             false
         )
@@ -49,6 +50,8 @@ class CalendarListFragment : BaseFragment() {
             val myIntent = Intent(mContext, EditCalendarListActivity::class.java)
             startActivity(myIntent)
         }
+
+
     }
 
     override fun onResume() {

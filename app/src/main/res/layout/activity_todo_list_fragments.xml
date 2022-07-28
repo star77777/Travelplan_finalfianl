@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+    <layout>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragments.CalendarListFragment">
+    tools:context=".fragments.TodoListFragments">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="최종비용"
+            android:text="하루비용"
             android:textStyle="bold" />
 
         <EditText
@@ -29,23 +31,16 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content" />
 
-        <Button
-            android:id="@+id/addTodayBtn"
-            android:layout_width="128dp"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
 
-
-            android:text="일정추가" />
-
-
+            android:src="@drawable/add_plus_new_icon" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/calendarListsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-
+        android:layout_height="match_parent" />
 </LinearLayout>
+
     </layout>

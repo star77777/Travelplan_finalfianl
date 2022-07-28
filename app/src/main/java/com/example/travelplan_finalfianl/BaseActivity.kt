@@ -11,11 +11,13 @@ import retrofit2.Retrofit
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    lateinit var mContext : Context
+
+    lateinit var mContext: Context
+
     //  lateinit var titleTxt : TextView
-    lateinit var retrofit : Retrofit
-    lateinit var apiList:APIList
-    lateinit var addBtn : ImageView
+    lateinit var retrofit: Retrofit
+    lateinit var apiList: APIList
+    lateinit var addBtn: ImageView
     // mSelectedDateTime = Calendar.getInstance ()  // Calendar () 생성자 사용 X
     //val mSelectedDateTime2 = Calendar.getInstance ()
 
@@ -24,11 +26,10 @@ abstract class BaseActivity : AppCompatActivity() {
         mContext = this
 
         retrofit = ServerApi.getRetrofit(mContext)
-        apiList =retrofit.create(APIList::class.java)
+        apiList = retrofit.create(APIList::class.java)
     }
 
     abstract fun setupEvents()
 
     abstract fun setValues()
-
 }

@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Travelplan_finalfianl">
         <activity
+            android:name=".fragments.TodoListFragments"
+            android:exported="false" />
+        <activity
+            android:name=".addlist.TodoListActivity"
+            android:exported="false" />
+        <activity
             android:name=".addlist.EditCalendarListActivity"
             android:exported="false" />
         <activity

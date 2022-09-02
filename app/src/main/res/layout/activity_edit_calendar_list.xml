@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
-    tools:context=".addlist.EditCalendarListActivity">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="약속 제목"/>
-
-    <EditText
-        android:id="@+id/titleEdt"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="제목 입력"
-        android:inputType="text"
-        android:imeOptions="actionNext"
-        android:maxLines="1"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="여행일자" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/yellow"
+        tools:context=".addlist.EditCalendarListActivity">
 
         <TextView
-            android:id="@+id/firstDateTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="약속 제목"/>
 
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="가는 날"
-            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/titleEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="제목 입력"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:background="@color/white"
+            android:maxLines="1"/>
         <TextView
-            android:id="@+id/lastDateTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="여행일자" />
 
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="오는 날"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/firstDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:background="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="가는 날"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:text="여행날짜를 눌러서 여행일시를 선택하세요." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="여행 장소" />
+
+        <EditText
+            android:id="@+id/placeNameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="여행 장소를 입력하세요."
+            android:imeOptions="actionDone"
+            android:background="@color/white"
+            android:inputType="text"
+            android:maxLines="1" />
 
 
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록하기" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:text="여행날짜를 눌러서 여행일시를 선택하세요." />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="여행 장소" />
-
-    <EditText
-        android:id="@+id/placeNameEdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="여행 장소를 입력하세요."
-        android:imeOptions="actionDone"
-        android:inputType="text"
-        android:maxLines="1" />
-
-
-
-    <Button
-        android:id="@+id/addBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="등록하기" />
-</LinearLayout>
 </layout>

@@ -5,38 +5,46 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travelplan_finalfianl.databinding.ListItemTodoListsBinding
-import com.example.travelplan_finalfianl.models.TodoListDatas
+import com.example.travelplan_finalfianl.models.CalendarListData
 import java.text.SimpleDateFormat
 
 class TodoListRecyclerViewAdapers(
-    val mContext : Context,
-    val mLists : List<TodoListDatas>,
-    val isInvited : Boolean
-): RecyclerView.Adapter<TodoListRecyclerViewAdapers.ItemHourViewHolder>() {
+    val mContext: Context,
+    val mList: List<CalendarListData>
+
+) : RecyclerView.Adapter<TodoListRecyclerViewAdapers.ItemHourViewHolder>() {
     inner class ItemHourViewHolder(val binding: ListItemTodoListsBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item : TodoListDatas) {
+        fun bind(item: CalendarListData) {
             binding.titleHourTxt.text = item.title
 
-            val sdfs = SimpleDateFormat("M/d a h:mm")
-
+            val sdfs = SimpleDateFormat("h:mm")
+            // binding.expenseTxt.text= "비용 : ${item.longitude}"
             binding.timeHourTxt.text = "${sdfs.format(item.datetime)}"
-            binding.placeHourNameTxt.text = "약속 장소 : ${item.place}"
+            binding.placeHourNameTxt.text = "약속 장소 :${item.place}"
+
 
         }
+//        fun bind(item:NaverApiData){
+//            binding.placeHourNameTxt.text = "약속 장소 : ${item.title}"
+//        }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHourViewHolder {
         return ItemHourViewHolder(
             ListItemTodoListsBinding
-                .inflate(LayoutInflater.from(mContext), parent, false))
+                .inflate(LayoutInflater.from(mContext), parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: ItemHourViewHolder, position: Int) {
-        holder.bind(mLists[position])
+        holder.bind(mList[position])
     }
 
     override fun getItemCount(): Int {
-        return mLists.size
+        return mList.size
     }
+
+
 }

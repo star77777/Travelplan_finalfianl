@@ -3,8 +3,6 @@ package com.example.travelplan_finalfianl.dialog
 import android.app.Activity
 import android.app.Dialog
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.widget.LinearLayout
 import com.example.travelplan_finalfianl.databinding.ActivityCustomAlertDialogBinding
 

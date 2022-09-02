@@ -3,7 +3,6 @@ package com.example.travelplan_finalfianl.api
 import android.content.Context
 import com.example.travelplan_finalfianl.utils.ContextUtil
 import com.google.gson.GsonBuilder
-import com.gun0912.tedpermission.provider.TedPermissionProvider.context
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -20,7 +19,7 @@ class ServerApi {
         fun getRetrofit(context: Context): Retrofit {
             if (retrofit == null) {
 
-                //                API요청이 발생하면 => 가로채서 => 헤더를 추가해주자.
+//                API요청이 발생하면 => 가로채서 => 헤더를 추가해주자.
 //                자동으로 헤더를 달아주는 효과 발생
 
                 val interceptor = Interceptor {

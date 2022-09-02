@@ -9,12 +9,6 @@
         android:background="?attr/selectableItemBackground"
         android:padding="10dp">
 
-        <ImageButton
-
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="end"
-            android:src="@drawable/add_plus_new_icon" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,6 +52,7 @@
             <!--            android:text="월일"-->
             <!--            android:textSize="20sp"-->
             <!--            android:textStyle="bold" />-->
+
 
 
         </LinearLayout>

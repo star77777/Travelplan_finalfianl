@@ -34,5 +34,4 @@ class DateDeserializer : JsonDeserializer<Date> {
 
     }
 
-
 }

@@ -3,17 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/drawable/card_view.xml" value="0.147" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_calendar_list_fragment.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_custom_alert_dialog.xml" value="0.16979166666666667" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_custom_alert_dialog_input2.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_edit_calendar_list.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_edit_todo.xml" value="0.175" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_edit_todo_list.xml" value="0.1" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_login.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_main.xml" value="0.20111214087117701" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_map.xml" value="0.175" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_mapview.xml" value="0.175" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_movement_fragment.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_settings_fragment.xml" value="0.16979166666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_sign_up.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_splash.xml" value="0.24947916666666667" />
-        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_todo_list.xml" value="0.1203125" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_todo_list.xml" value="0.1" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/activity_todo_list_fragments.xml" value="0.1203125" />
+        <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/list_item_place.xml" value="0.2609375" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/list_item_todo_lists.xml" value="0.1203125" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/layout/list_item_travel_list.xml" value="0.17864583333333334" />
         <entry key="..\:/Users/Administrator.DESKTOP-SD0JJ92/AndroidStudioProjects/Travelplan_finalfianl/app/src/main/res/menu/bottom_nav_menu.xml" value="0.16979166666666667" />

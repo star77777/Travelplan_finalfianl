@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.travelplan_finalfianl.BaseActivity
-import com.example.travelplan_finalfianl.MainActivity
 import com.example.travelplan_finalfianl.R
 import com.example.travelplan_finalfianl.databinding.ActivityLoginBinding
 import com.example.travelplan_finalfianl.models.BasicResponse

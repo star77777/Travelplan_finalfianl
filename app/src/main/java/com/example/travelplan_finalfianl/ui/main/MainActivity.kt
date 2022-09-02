@@ -1,13 +1,12 @@
-package com.example.travelplan_finalfianl
+package com.example.travelplan_finalfianl.ui.main
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
+import com.example.travelplan_finalfianl.BaseActivity
+import com.example.travelplan_finalfianl.R
 import com.example.travelplan_finalfianl.adapters.MainViewPagerAdapter
 import com.example.travelplan_finalfianl.databinding.ActivityMainBinding
-import com.example.travelplan_finalfianl.ui.main.LoginActivity
 
 class MainActivity  : BaseActivity() {
 
@@ -16,7 +15,7 @@ class MainActivity  : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setupEvents()
         setValues()
     }

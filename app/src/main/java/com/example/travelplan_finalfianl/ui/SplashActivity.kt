@@ -1,14 +1,13 @@
 package com.example.travelplan_finalfianl.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import com.example.travelplan_finalfianl.BaseActivity
-import com.example.travelplan_finalfianl.MainActivity
+import com.example.travelplan_finalfianl.ui.main.MainActivity
 import com.example.travelplan_finalfianl.R
 import com.example.travelplan_finalfianl.models.BasicResponse
 import com.example.travelplan_finalfianl.ui.main.LoginActivity

@@ -1,8 +1,9 @@
 package com.example.travelplan_finalfianl.models
 
+import java.io.Serializable
 import java.util.*
 
-class TodoListDatas(
+data class TodoListDatas(
     val id : Int,
     val title : String,
     val datetime : Date,
@@ -10,6 +11,6 @@ class TodoListDatas(
     val latitude : Double,
     val longitude : Double,
     val user : UserData,
-){
+)  {
 
 }

@@ -3,7 +3,6 @@ package com.example.travelplan_finalfianl.fragments
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.view.LayoutInflater
@@ -34,14 +33,15 @@ import java.io.File
 
 class SettingsFragment : BaseFragment() {
 
-    lateinit var binding : ActivitySettingsFragmentBinding
+    lateinit var binding: ActivitySettingsFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.activity_settings_fragment, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.activity_settings_fragment, container, false)
         return binding.root
     }
 
@@ -52,6 +52,8 @@ class SettingsFragment : BaseFragment() {
     }
 
     override fun setupEvents() {
+
+
 //        프로필 이미지 변경 이벤트
         binding.profileImg.setOnClickListener {
             //    갤러리를 개발자가 이용 : 유저 허락을 받아야한다. => 권한 세팅
@@ -80,6 +82,7 @@ class SettingsFragment : BaseFragment() {
                 //                    테드 퍼미션이 지원하는 Denied 경우의 Alert
                 .setDeniedMessage("[설정] > [권한]에서 갤러리 권한을 열어주세요.")
                 .check()
+
         }
 
 //        닉네임 변경 이벤트
@@ -128,14 +131,62 @@ class SettingsFragment : BaseFragment() {
             alert.binding.negativeBtn.setOnClickListener {
                 alert.dialog.dismiss()
             }
+
         }
 
 
 //        비밀번호 변경 이벤트
         binding.changePwLayout.setOnClickListener {
+            val alert = CustomAlertDialog(mContext, requireActivity())
+            alert.myDialog()
 
+            alert.binding.titleTxt.text = "비밀번호 변경"
+            alert.binding.bodyTxt.visibility = View.GONE
+            alert.binding.newpasswordEdt.visibility=View.VISIBLE
+            //alert.binding.contentEdt.visibility =View.GONE
+            alert.binding.bodyTxt.text = "현재 비밀번호"
+            alert.binding.contentEdt.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+            alert.binding.newpasswordEdt.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+            alert.binding.contentEdt.hint = "현재 비밀번호를 입력해주세요."
+            alert.binding.newpasswordEdt.hint ="새로운 비밀번호를 입력해주세요"
+            alert.binding.newpasswordEdt.text.toString()
+            alert.binding.contentEdt.text.toString()
+            alert.binding.positiveBtn.setOnClickListener {
+                apiList.patchPasswordChange(
+                    alert.binding.newpasswordEdt.text.toString(),
+                    alert.binding.contentEdt.text.toString(),
+
+                    ).enqueue(object : Callback<BasicResponse> {
+                    override fun onResponse(
+                        call: Call<BasicResponse>,
+                        response: Response<BasicResponse>
+                    ) {
+                        if (response.isSuccessful) {
+                            val br = response.body()!!
+                            GlobalData.loginUser = br.data.user
+                            ContextUtil.setLoginToken(mContext, br.data.token)
+                            alert.dialog.dismiss()
+                        }
+//
+                        else {
+                            val errorBodyStr = response.errorBody()!!.string()
+                            val jsonObj = JSONObject(errorBodyStr)
+                            val message = jsonObj.getString("message")
+
+                            Toast.makeText(mContext, message, Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onFailure(call: Call<BasicResponse>, t: Throwable) {
+
+                    }
+                })
+            }
+
+            alert.binding.negativeBtn.setOnClickListener {
+                alert.dialog.dismiss()
+            }
         }
-
 
 //        공유하기 이벤트
         binding.share.setOnClickListener {
@@ -159,7 +210,8 @@ class SettingsFragment : BaseFragment() {
                 GlobalData.loginUser = null
 
                 val myIntent = Intent(mContext, LoginActivity::class.java)
-                myIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                myIntent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(myIntent)
 
                 alert.dialog.dismiss()
@@ -173,13 +225,7 @@ class SettingsFragment : BaseFragment() {
     override fun setValues() {
         setUserData()
 
-        when (GlobalData.loginUser!!.provider) {
-            "kakao" -> {
-            }
-            "facebook" -> {
-            }
-            else -> binding.socialLoginImg.visibility = View.GONE
-        }
+
     }
 
     fun setUserData() {
@@ -212,9 +258,13 @@ class SettingsFragment : BaseFragment() {
 
 //            파일을 retrofit에 첨부할 수 있는 => RequestBody => MultipartBody 형태로 변환
                 val fileReqBody = RequestBody.create(MediaType.get("image/*"), file)
-                val body = MultipartBody.Part.createFormData("profile_image", "myFile.jpg", fileReqBody)
+                val body = MultipartBody.Part.createFormData(
+                    "profile_image",
+                    "myFile.jpg",
+                    fileReqBody
+                )
 
-                apiList.putRequestUserImage(body).enqueue(object : Callback<BasicResponse>{
+                apiList.putRequestUserImage(body).enqueue(object : Callback<BasicResponse> {
                     override fun onResponse(
                         call: Call<BasicResponse>,
                         response: Response<BasicResponse>
@@ -223,10 +273,12 @@ class SettingsFragment : BaseFragment() {
 //                        1. 선택한 이미지로 UI 프사 변경
                             GlobalData.loginUser = response.body()!!.data.user
 
-                            Glide.with(mContext).load(GlobalData.loginUser!!.profileImg).into(binding.profileImg)
+                            Glide.with(mContext).load(GlobalData.loginUser!!.profileImg)
+                                .into(binding.profileImg)
 
 //                        2. 토스트로 성공 메세지
-                            Toast.makeText(mContext, "프로필 사진이 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(mContext, "프로필 사진이 변경되었습니다.", Toast.LENGTH_SHORT)
+                                .show()
                         }
                     }
 
@@ -236,6 +288,4 @@ class SettingsFragment : BaseFragment() {
                 })
             }
         }
-
 }
-

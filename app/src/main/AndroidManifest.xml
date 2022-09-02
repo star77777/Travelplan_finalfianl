@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.travelplan_finalfianl">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -7,20 +8,23 @@
 
     <application
         android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Travelplan_finalfianl">
+        android:theme="@style/Theme.Travelplan_finalfianl"
+        tools:replace="android:appComponentFactory">
         <activity
-            android:name=".fragments.TodoListFragments"
-            android:exported="false" />
-        <activity
-            android:name=".addlist.TodoListActivity"
+            android:name=".fragments.TodoListActivityy"
             android:exported="false" />
         <activity
             android:name=".addlist.EditCalendarListActivity"
             android:exported="false" />
+        <activity
+            android:name=".addlist.TodoListActivityf"
+            android:exported="false" />
+
         <activity
             android:name=".ui.signup.SignUpActivity"
             android:exported="false" />
@@ -38,8 +42,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="false" />
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="s78Urs0xtCSzccVaYX1K" />
     </application>
 
 </manifest>

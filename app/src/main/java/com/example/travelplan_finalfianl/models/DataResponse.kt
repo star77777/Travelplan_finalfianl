@@ -14,5 +14,7 @@ data class DataResponse (
     val calendarlist : CalendarListData,
     @SerializedName("appointments")
     val calendarlists : List<CalendarListData>,
-) {
+
+
+    ) {
 }

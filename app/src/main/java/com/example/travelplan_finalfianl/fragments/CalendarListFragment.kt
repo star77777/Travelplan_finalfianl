@@ -1,7 +1,6 @@
 package com.example.travelplan_finalfianl.fragments
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +16,7 @@ import com.example.travelplan_finalfianl.models.CalendarListData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
 
 class CalendarListFragment : BaseFragment() {
 
@@ -46,6 +46,8 @@ class CalendarListFragment : BaseFragment() {
 
 
     override fun setupEvents() {
+
+
         binding.addTodayBtn.setOnClickListener {
             val myIntent = Intent(mContext, EditCalendarListActivity::class.java)
             startActivity(myIntent)
@@ -60,18 +62,31 @@ class CalendarListFragment : BaseFragment() {
     }
 
     override fun setValues() {
+
         mCalendarAdaper = CalendarListRecylerViewAdapter(mContext, mCalendarList, false)
         binding.calendarListsRecyclerView.adapter = mCalendarAdaper
+
         binding.calendarListsRecyclerView.layoutManager = LinearLayoutManager(mContext)
+
     }
 
     fun getCalendarListFromServer() {
+
         apiList.getRequestMdataList().enqueue(object : Callback<BasicResponse> {
-            override fun onResponse(call: Call<BasicResponse>, response: Response<BasicResponse>) {
+            override fun onResponse(
+                call: Call<BasicResponse>,
+                response: Response<BasicResponse>
+            ) {
                 if (response.isSuccessful) {
                     val br = response.body()!!
                     mCalendarList.clear()
-                    mCalendarList.addAll(br.data.calendarlists)
+                    val sdf = SimpleDateFormat("h:mm:ss")
+                    for (data in br.data.calendarlists) {
+                        val time = sdf.format(data.datetime)
+                        if (time == "6:11:11") {
+                            mCalendarList.add(data)
+                        }
+                    }
                     mCalendarAdaper.notifyDataSetChanged()
                 }
             }
@@ -81,5 +96,4 @@ class CalendarListFragment : BaseFragment() {
             }
         })
     }
-
 }
